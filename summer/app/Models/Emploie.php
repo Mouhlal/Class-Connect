@@ -11,4 +11,7 @@ class Emploie extends Model
     use HasFactory,SoftDeletes;
 
     protected $guarded=[];
+    public function Modules(){
+        return $this->hasMany(Modules::class);
+    }
 }

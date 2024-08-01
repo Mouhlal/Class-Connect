@@ -10,5 +10,15 @@ class Modules extends Model
 {
     use HasFactory,SoftDeletes;
 
-    protected $guarded = []; 
+    protected $guarded = [];
+
+    public function Etudiants(){
+        return $this->hasMany(Notes::class);
+    }
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
+    public function Emploie(){
+        return $this->hasMany(Emploie::class);
+    }
 }

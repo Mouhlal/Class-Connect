@@ -11,4 +11,11 @@ class NvScolaire extends Model
     use HasFactory,SoftDeletes;
 
     protected $guarded = [];
+
+    public function Etudiants(){
+        return $this->hasMany(Etudiants::class);
+    }
+    public function Emploie(){
+        return $this->hasMany(Emploie::class);
+    }
 }

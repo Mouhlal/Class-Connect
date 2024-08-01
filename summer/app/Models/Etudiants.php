@@ -11,4 +11,11 @@ class Etudiants extends Model
     use HasFactory,SoftDeletes;
 
     protected $guarded=[];
+
+    public function NvScolaire(){
+        return $this->belongsTo(NvScolaire::class);
+    }
+    public function Notes(){
+        return $this->hasMany(Notes::class);
+    }
 }
