@@ -11,13 +11,33 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-white">
+<body class="bg-white font-serif">
 
     <!-- home section -->
 
     @include('layouts.header')
 
     <!-- home section //end -->
+    <section class="py-8 md:py-16 relative md:bottom-9">
+        <div class="container max-w-screen-xl mx-auto px-4">
+    <header class="flex-col xl:flex-row flex justify-between">
+        <div class="mx-auto text-center xl:text-left xl:mx-0 mb-20 xl:mb-0">
+            <h1 class="font-bold text-gray-700 text-3xl md:text-6xl leading-tight mb-10">Bienvenue sur ClassConnect</h1>
+
+            <p class="font-normal text-gray-500 text-sm md:text-lg mb-10">Votre portail de gestion scolaire simplifiée. Suivez les performances des élèves, gérez les emplois du temps, et accédez aux informations clés en un seul endroit.</p>
+
+            <div class="flex items-center justify-center lg:justify-start">
+                <a href="#" class="px-8 py-3 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300 mr-14">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="mx-auto xl:mx-0">
+            <img src="{{ asset('storage/fonts/home-img.svg') }}" alt="Image">
+        </div>
+
+    </header>
+    </div>
+    </section>
 
     <!-- feature section -->
     <section class="py-8 md:py-16">

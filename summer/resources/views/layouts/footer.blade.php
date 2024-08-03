@@ -1,11 +1,11 @@
 
-<footer class="bg-green-50 py-8 md:py-16">
+<footer class="bg-green-50 py-8 md:py-16 font-serif ">
     <div class="container max-w-screen-xl mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-3">
             <div class="col-span-1 lg:col-span-1 text-center lg:text-left mb-5 md:mb-10">
                 <img src="{{ asset('storage/images/lo.png') }}" alt="Logo" class="mx-auto w-36 lg:mx-0 mb-5 md:mb-10">
 
-                <p class="font-normal text-gray-500 text-sm md:text-lg">ClassConnect est une solution complète pour la gestion scolaire, simplifiant les tâches administratives et permettant aux établissements de se concentrer sur l'éducation.</p>
+                <p class="font-normal w-80 text-gray-500 text-sm md:text-lg">ClassConnect est une solution complète pour la gestion scolaire, simplifiant les tâches administratives et permettant aux établissements de se concentrer sur l'éducation.</p>
             </div>
 
             <div class="col-span-1 lg:col-span-2">
