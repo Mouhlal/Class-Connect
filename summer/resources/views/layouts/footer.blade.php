@@ -1,53 +1,74 @@
 
-  <div class="bg-white-300 pt-44 pb-24">
-    <div class="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
-      <div class="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start">
-        <img src="{{asset('storage/images/logo.png')}}" alt="Logo" class="h-8 w-auto mb-6" />
-        <p class="mb-4">
-          <strong class="font-medium">LaslesVPN</strong> is a private virtual network that has unique features and has high security.
-        </p>
-        <div class="flex w-full mt-2 mb-8 -mx-2">
-          <div class="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-            <ion-icon class="h-6 w-6" name="logo-facebook"></ion-icon>
-          </div>
-          <div class="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-            <img src="../../public/assets/Icon/twitter.svg" alt="Twitter" class="h-6 w-6" />
-          </div>
-          <div class="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
-            <img src="../../public/assets/Icon/instagram.svg" alt="Instagram" class="h-6 w-6" />
-          </div>
-        </div>
-        <p class="text-gray-400">©<script>document.write(new Date().getFullYear())</script> - LaslesVPN</p>
-      </div>
-      <div class="row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col">
-        <p class="text-black-600 mb-4 font-medium text-lg">Product</p>
-        <ul class="text-black-500">
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Download</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Pricing</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Locations</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Server</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Countries</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Blog</li>
-        </ul>
-      </div>
-      <div class="row-span-2 sm:col-span-2 sm:col-start-9 sm:col-end-11 flex flex-col">
-        <p class="text-black-600 mb-4 font-medium text-lg">Engage</p>
-        <ul class="text-black-500">
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">LaslesVPN ?</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">FAQ</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Tutorials</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">About Us</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Privacy Policy</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Terms of Service</li>
-        </ul>
-      </div>
-      <div class="row-span-2 sm:col-span-2 sm:col-start-11 sm:col-end-13 flex flex-col">
-        <p class="text-black-600 mb-4 font-medium text-lg">Earn Money</p>
-        <ul class="text-black-500">
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Affiliate</li>
-          <li class="my-2 hover:text-orange-500 cursor-pointer transition-all">Become Partner</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<footer class="bg-green-50 py-8 md:py-16">
+    <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="col-span-1 lg:col-span-1 text-center lg:text-left mb-5 md:mb-10">
+                <img src="{{ asset('storage/images/lo.png') }}" alt="Logo" class="mx-auto w-36 lg:mx-0 mb-5 md:mb-10">
 
+                <p class="font-normal text-gray-500 text-sm md:text-lg">ClassConnect est une solution complète pour la gestion scolaire, simplifiant les tâches administratives et permettant aux établissements de se concentrer sur l'éducation.</p>
+            </div>
+
+            <div class="col-span-1 lg:col-span-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center lg:text-left">
+                    <div class="mb-5 md:mb-10">
+                        <h2 class="font-semibold text-black text-lg mb-5">Navigation</h2>
+
+                        <ul class="font-normal text-gray-500 text-sm md:text-lg space-y-3">
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Accueil</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Professeurs</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Matières</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5 md:mb-10">
+                        <h2 class="font-semibold text-black text-lg mb-5">Liens Utiles</h2>
+
+                        <ul class="font-normal text-gray-500 text-sm md:text-lg space-y-3">
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">FAQ</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Support</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5 md:mb-10">
+                        <h2 class="font-semibold text-black text-lg mb-5">Suivez-nous</h2>
+
+                        <ul class="font-normal text-gray-500 text-sm md:text-lg space-y-3">
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Facebook</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Instagram</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-5 mt-5 text-center">
+            <p class="font-normal text-gray-500 text-sm md:text-lg">&copy; 2024 ClassConnect. Tous droits réservés.</p>
+        </div>
+    </div> <!-- container.// -->
+</footer>

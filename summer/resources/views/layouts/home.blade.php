@@ -1,80 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Connect</title>
-  @vite('resources/css/app.css')
-  <link rel="shortcut icon" href="{{asset('storage/images/log.png')}}" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassConnect</title>
+    <link rel="shortcut icon" href="{{asset('storage/images/log.png')}}" type="image/x-icon">
+
+    @vite('resources/css/app.css')
 </head>
-<body>
+
+<body class="bg-white">
+
+    <!-- home section -->
 
     @include('layouts.header')
 
-  <div class="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
-    <!-- Main Content -->
-    <div class="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16">
-      <div class="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-        <h1 class="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-          Want anything to be easy with <strong>LaslesVPN</strong>.
-        </h1>
-        <p class="text-black-500 mt-4 mb-6">
-          Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.
-        </p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">Get Started</button>
-      </div>
-      <div class="flex w-full">
-        <img src="/assets/Illustration1.png" alt="VPN Illustrasi" class="h-full w-full object-contain">
-      </div>
+    <!-- home section //end -->
+
+    <!-- feature section -->
+    <section class="py-8 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                <div class="text-center mb-10 xl:mb-0">
+                    <div class="flex items-center justify-center">
+                        <div class="w-20 py-7 flex justify-center bg-purple-50 text-purple-500 rounded-md mb-5 md:mb-10">
+                            <i data-feather="bar-chart-2"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">Suivi des Performances</h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">Obtenez des rapports détaillés sur les performances des étudiants.</p>
+                </div>
+
+                <div class="text-center mb-10 md:mb-0">
+                    <div class="flex items-center justify-center">
+                        <div class="w-20 py-7 flex justify-center bg-red-50 text-red-500 rounded-md mb-5 md:mb-10">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">Gestion des Emplois du Temps</h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">Planifiez et gérez les horaires des classes et des professeurs facilement.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="flex items-center justify-center">
+                        <div class="w-20 py-7 flex justify-center bg-blue-50 text-blue-500 rounded-md mb-5 md:mb-10">
+                            <i data-feather="search"></i>
+                        </div>
+                    </div>
+
+                    <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">Accès aux Informations</h2>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg">Accédez rapidement aux informations clés sur les professeurs, les matières, et les étudiants.</p>
+                </div>
+            </div>
+        </div> <!-- container.// -->
+    </section>
+    <!-- feature section //end -->
+
+    <section class="py-8 md:py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1 class="font-semibold text-gray-700 text-3xl md:text-4xl text-center mb-5">Nos Services</h1>
+
+            <p class="font-normal text-gray-500 text-md md:text-lg text-center mb-20 md:mb-40">Découvrez comment ClassConnect peut transformer la gestion scolaire.</p>
+
+            <div class="flex flex-col xl:flex-row items-center justify-between mb-20 md:mb-40">
+                <div class="mx-auto xl:mx-0 mb-20 xl:mb-0">
+                    <img src="{{ asset('storage/fonts/image-1.svg') }}" alt="Image">
+                </div>
+
+                <div class="mx-auto xl:mx-0 text-center xl:text-left">
+                    <h1 class="font-bold text-gray-700 text-3xl md:text-4xl mb-10">Gestion des Classes</h1>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg mb-5">Organisez et gérez les classes efficacement avec notre interface intuitive.</p>
+
+                    <a href="#" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
+                        En savoir plus
+                        <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row items-center justify-between mb-20 md:mb-40">
+                <div class="mx-auto xl:mx-0 mb-20 xl:mb-0 order-last xl:order-first">
+                    <img src="{{ asset('storage/fonts/image-2.svg') }}" alt="Image">
+                </div>
+
+                <div class="mx-auto xl:mx-0 text-center xl:text-left">
+                    <h1 class="font-bold text-gray-700 text-3xl md:text-4xl mb-10">Gestion des Professeurs</h1>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg mb-5">Attribuez des matières et gérez les emplois du temps des professeurs facilement.</p>
+
+                    <a href="#" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
+                        En savoir plus
+                        <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col xl:flex-row items-center justify-between mb-20 md:mb-40">
+                <div class="mx-auto xl:mx-0 mb-20 xl:mb-0">
+                    <img src="{{ asset('storage/fonts/image-3.svg') }}" alt="Image">
+                </div>
+
+                <div class="mx-auto xl:mx-0 text-center xl:text-left">
+                    <h1 class="font-bold text-gray-700 text-3xl md:text-4xl mb-10">Suivi des Étudiants</h1>
+
+                    <p class="font-normal text-gray-400 text-sm md:text-lg mb-5">Suivez les progrès des étudiants et accédez à leurs résultats en un clic.</p>
+
+                    <a href="#" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
+                        En savoir plus
+                        <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- container.// -->
+    </section>
+
+    <section class="py-8 md:py-16 bg-gray-100">
+
+     <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-wrap md:flex-nowrap justify-between mb-8">
+            <div>
+                <p class="font-normal text-gray-500 text-md md:text-lg uppercase mb-3">Let's tealk</p>
+
+                <h1 class="font-bold text-gray-700 text-xl md:text-4xl">Do you have any Project?</h1>
+            </div>
+
+            <div class="mt-10">
+                <a href="#" class="px-4 py-2 md:px-8 md:py-3 font-medium text-green-500 text-lg border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">
+                    Contact us now
+                </a>
+            </div>
+        </div>
+
+        <hr class="text-gray-300 mb-8">
+
+        <p class="font-normal text-gray-500 text-md md:text-lg mb-4 md:mb-10">Rejoignez des centaines d'établissements qui utilisent ClassConnect pour simplifier la gestion scolaire.</p>
     </div>
 
-    <!-- Stats Section -->
-    <div class="relative w-full flex">
-      <div class="rounded-lg w-full grid grid-flow-row sm:grid-flow-row grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-gray-100 bg-white-500 z-10">
-        <!-- User Stats -->
-        <div class="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0">
-          <div class="flex mx-auto w-40 sm:w-auto">
-            <div class="flex items-center justify-center bg-orange-100 w-12 h-12 mr-6 rounded-full">
-              <img src="/assets/Icon/heroicons_sm-user.svg" class="h-6 w-6" alt="User Icon">
-            </div>
-            <div class="flex flex-col">
-              <p class="text-xl text-black-600 font-bold">390+</p>
-              <p class="text-lg text-black-500">Users</p>
-            </div>
-          </div>
-        </div>
-        <!-- Location Stats -->
-        <div class="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0">
-          <div class="flex mx-auto w-40 sm:w-auto">
-            <div class="flex items-center justify-center bg-orange-100 w-12 h-12 mr-6 rounded-full">
-              <img src="/assets/Icon/gridicons_location.svg" class="h-6 w-6" alt="Location Icon">
-            </div>
-            <div class="flex flex-col">
-              <p class="text-xl text-black-600 font-bold">20+</p>
-              <p class="text-lg text-black-500">Locations</p>
-            </div>
-          </div>
-        </div>
-        <!-- Server Stats -->
-        <div class="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0">
-          <div class="flex mx-auto w-40 sm:w-auto">
-            <div class="flex items-center justify-center bg-orange-100 w-12 h-12 mr-6 rounded-full">
-              <img src="/assets/Icon/bx_bxs-server.svg" class="h-6 w-6" alt="Server Icon">
-            </div>
-            <div class="flex flex-col">
-              <p class="text-xl text-black-600 font-bold">50+</p>
-              <p class="text-lg text-black-500">Servers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="absolute bg-black-600 opacity-5 w-11/12 rounded-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0" style="filter: blur(114px);"></div>
-    </div>
-  </div>
+    </section>
 
-  @include('layouts.footer')
+
+    @include('layouts.footer')
 
 </body>
-</html>
 
+</html>
