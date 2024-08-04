@@ -21,4 +21,7 @@ class Modules extends Model
     public function Emploie(){
         return $this->hasMany(Emploie::class);
     }
+    public function affectations() {
+        return $this->hasMany(Affectation::class);
+    }
 }

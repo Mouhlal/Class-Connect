@@ -29,8 +29,13 @@ class User extends Authenticatable
     public function Modules(){
         return $this->hasMany(Modules::class);
     }
-
-    /**
+    public function affectations() {
+        return $this->hasMany(Affectation::class);
+    }
+    public function nv_scolaires(){
+        return $this->hasMany(NvScolaire::class);
+    }
+     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
