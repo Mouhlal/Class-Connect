@@ -21,6 +21,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'image',
         'password',
         'cin'
     ];
@@ -28,7 +29,7 @@ class User extends Authenticatable
     public function Modules(){
         return $this->hasMany(Modules::class);
     }
-    
+
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -18,11 +18,13 @@ class UserController extends Controller
     public function store(Request $request){
         $form = $request->validate([
             'name' => 'required',
+            'image' => 'image|required',
             'cin' => 'required|unique:users',
             'email' => 'required|unique:users',
             'password' => 'required|confirmed',
         ]);
         $form['password'] = Hash::make($request->password);
+        $form['image'] = $request->file('image')->store('users','public');
         User::create($form);
         return redirect()->route('auth.login')->with('succes','Le compte a bien crée');
     }
