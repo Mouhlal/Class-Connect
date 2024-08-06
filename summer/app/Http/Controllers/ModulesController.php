@@ -11,7 +11,7 @@ class ModulesController extends Controller
 {
 
     public function index(){
-        $modules = Modules::with('affectations.user')->get();
+        $modules = Modules::with('affectations')->get();
         return view('profs.modules',[
             'modules' => $modules,
         ]);

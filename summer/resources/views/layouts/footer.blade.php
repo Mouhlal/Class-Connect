@@ -15,7 +15,7 @@
 
                         <ul class="font-normal text-gray-500 text-sm md:text-lg space-y-3">
                             <li>
-                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Accueil</a>
+                                <a href="/" class="hover:text-red-600 transition ease-in-out duration-300">Accueil</a>
                             </li>
 
                             <li>
@@ -23,7 +23,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Matières</a>
+                                <a href="{{route('profs.modules')}}" class="hover:text-red-600 transition ease-in-out duration-300">Modules</a>
                             </li>
                         </ul>
                     </div>
