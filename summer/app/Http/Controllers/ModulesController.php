@@ -9,12 +9,12 @@ use Illuminate\Http\Request;
 
 class ModulesController extends Controller
 {
+
     public function index(){
-        $modules = Modules::all();
-        $affectations = Affectation::with(['users','modules','nv_scolaires'])->get();
+        $modules = Modules::with('affectations.user')->get();
         return view('profs.modules',[
             'modules' => $modules,
-            'affectations' => $affectations
         ]);
     }
+
 }

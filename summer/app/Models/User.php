@@ -26,15 +26,7 @@ class User extends Authenticatable
         'cin'
     ];
 
-    public function Modules(){
-        return $this->hasMany(Modules::class);
-    }
-    public function affectations() {
-        return $this->hasMany(Affectation::class);
-    }
-    public function nv_scolaires(){
-        return $this->hasMany(NvScolaire::class);
-    }
+
      /**
      * The attributes that should be hidden for serialization.
      *
@@ -56,5 +48,16 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function Modules(){
+        return $this->hasMany(Modules::class);
+    }
+    public function Affectations()
+    {
+        return $this->hasMany(Affectation::class, 'users_id');
+    }
+    public function nv_scolaires(){
+        return $this->hasMany(NvScolaire::class);
     }
 }

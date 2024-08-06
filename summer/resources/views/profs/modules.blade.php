@@ -30,9 +30,15 @@
                 <div class="text-gray-700">
                     <p><strong>Professeurs:</strong></p>
                     <ul>
-
-                                <li>{{ $modules->user->name }}</li>
-        
+                        @forelse($module->affectations as $affectation)
+                            @if($affectation->user)
+                                <li>{{ $affectation->user->name }}</li>
+                            @else
+                                <li>Non assigné</li>
+                            @endif
+                        @empty
+                            <li>Non assigné</li>
+                        @endforelse
                     </ul>
                     <p><strong>Coef:</strong> {{ $module->coef }}</p>
                 </div>

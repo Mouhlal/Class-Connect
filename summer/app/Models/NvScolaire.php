@@ -18,4 +18,7 @@ class NvScolaire extends Model
     public function Emploie(){
         return $this->hasMany(Emploie::class);
     }
+    public function Affectation(){
+        return $this->hasMany(Affectation::class,'nv_scolaires_id');
+    }
 }

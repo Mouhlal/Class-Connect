@@ -11,15 +11,14 @@ class Affectation extends Model
     use HasFactory,SoftDeletes;
 
     protected $guarded=[];
-    public function User(){
-        return $this->belongsTo(User::class);
+    public function user(){
+        return $this->belongsTo(User::class, 'users_id');
     }
-
-    public function Modules(){
-        return $this->belongsTo(Modules::class);
+    public function module(){
+        return $this->belongsTo(Modules::class, 'modules_id');
     }
     public function NvScolaire(){
-        return $this->belongsTo(NvScolaire::class);
+        return $this->belongsTo(NvScolaire::class,'nv_scolaires_id');
     }
 
 }

@@ -12,7 +12,7 @@ class Modules extends Model
 
     protected $guarded = [];
 
-    public function Etudiants(){
+    public function Notes(){
         return $this->hasMany(Notes::class);
     }
     public function User(){
@@ -21,7 +21,7 @@ class Modules extends Model
     public function Emploie(){
         return $this->hasMany(Emploie::class);
     }
-    public function affectations() {
-        return $this->hasMany(Affectation::class);
+    public function Affectations(){
+        return $this->hasMany(Affectation::class, 'modules_id');
     }
 }
