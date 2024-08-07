@@ -57,7 +57,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Affectation::class, 'users_id');
     }
-    public function nv_scolaires(){
-        return $this->hasMany(NvScolaire::class);
+    public function nv_scolaires()
+    {
+        return $this->belongsTo(NvScolaire::class, 'nv_scolaires_id');
     }
 }

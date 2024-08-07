@@ -16,6 +16,8 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/logout','logout')->name('auth.logout');
     Route::get('/register','register')->name('auth.register');
     Route::post('/store','store')->name('auth.store');
+    Route::get('/profs','index')->name('profs.profs');
+    Route::get('/profs/{id}','profile')->name('profs.profile');
 });
 
 Route::get('/modules',[ModulesController::class,'index'])->name('profs.modules');

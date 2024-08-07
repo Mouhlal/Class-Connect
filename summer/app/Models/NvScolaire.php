@@ -21,4 +21,8 @@ class NvScolaire extends Model
     public function Affectation(){
         return $this->hasMany(Affectation::class,'nv_scolaires_id');
     }
+    public function user()
+    {
+        return $this->hasMany(User::class, 'nv_scolaires_id');
+    }
 }

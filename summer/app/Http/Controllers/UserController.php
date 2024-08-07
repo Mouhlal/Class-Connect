@@ -57,4 +57,18 @@ class UserController extends Controller
         return redirect()->route('layouts.home')->with('logout','Deconnexion avec succées');
     }
 
+    public function index(){
+        $profs = User::with('affectations')->get();
+        return view('profs.profs',[
+            'profs' => $profs
+        ]);
+    }
+    public function profile($id)
+    {
+        $profile = User::with('affectations')->findOrFail($id);
+        return view('profs.profile', [
+            'profile' => $profile
+        ]);
+    }
+
 }

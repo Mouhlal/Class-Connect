@@ -17,8 +17,8 @@ class Affectation extends Model
     public function module(){
         return $this->belongsTo(Modules::class, 'modules_id');
     }
-    public function NvScolaire(){
-        return $this->belongsTo(NvScolaire::class,'nv_scolaires_id');
+    public function nv_scolaire(){
+        return $this->belongsTo(NvScolaire::class, 'nv_scolaires_id');
     }
 
 }
