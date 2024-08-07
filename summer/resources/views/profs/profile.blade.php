@@ -18,7 +18,9 @@
             <img src="{{ asset('storage/' . $profile->image) }}" alt="{{ $profile->name }}" class="w-32 h-32 rounded-full mr-6">
             <div>
                 <h1 class="text-3xl font-bold text-gray-700">{{ $profile->name }}</h1>
-                <p class="text-gray-500">{{ $profile->email }}</p>
+                <a title="mail" href="mailto:{{$profile->email}}">
+                    <p class="text-gray-500">{{ $profile->email }}</p>
+                </a>
                 <p class="text-gray-500">{{ $profile->cin }}</p>
             </div>
         </div>

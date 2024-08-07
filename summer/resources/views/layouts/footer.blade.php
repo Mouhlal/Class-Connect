@@ -19,7 +19,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Professeurs</a>
+                                <a href="{{route('profs.profs')}}" class="hover:text-red-600 transition ease-in-out duration-300">Professeurs</a>
                             </li>
 
                             <li>
@@ -33,7 +33,7 @@
 
                         <ul class="font-normal text-gray-500 text-sm md:text-lg space-y-3">
                             <li>
-                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">FAQ</a>
+                                <a href="{{route('layouts.faq')}}" class="hover:text-red-600 transition ease-in-out duration-300">FAQ</a>
                             </li>
 
                             <li>

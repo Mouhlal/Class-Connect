@@ -18,7 +18,7 @@
     @include('layouts.header')
 
     <!-- home section //end -->
-    <section class="py-8 md:py-16 relative md:bottom-9">
+    <section class="py-8 md:py-16 relative md:bottom-28">
         <div class="container max-w-screen-xl mx-auto px-4">
     <header class="flex-col xl:flex-row flex justify-between">
         <div class="mx-auto text-center xl:text-left xl:mx-0 mb-20 xl:mb-0">
@@ -27,7 +27,7 @@
             <p class="font-normal text-gray-500 text-sm md:text-lg mb-10">Votre portail de gestion scolaire simplifiée. Suivez les performances des élèves, gérez les emplois du temps, et accédez aux informations clés en un seul endroit.</p>
 
             <div class="flex items-center justify-center lg:justify-start">
-                <a href="#" class="px-8 py-3 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300 mr-14">En savoir plus</a>
+                <a href="#" class="px-8 py-3 relative left-8 bg-green-500 font-medium text-white text-md md:text-lg rounded-md hover:bg-green-700 transition ease-in-out duration-300 mr-14">En savoir plus</a>
             </div>
         </div>
 
