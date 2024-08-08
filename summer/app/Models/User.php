@@ -61,4 +61,5 @@ class User extends Authenticatable
     {
         return $this->belongsTo(NvScolaire::class, 'nv_scolaires_id');
     }
+    
 }
