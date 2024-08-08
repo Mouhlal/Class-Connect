@@ -12,7 +12,7 @@ class Etudiants extends Model
 
     protected $guarded=[];
 
-    public function NvScolaire(){
+    public function nv_scolaires(){
         return $this->belongsTo(NvScolaire::class);
     }
     public function Notes(){

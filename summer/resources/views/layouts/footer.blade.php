@@ -41,7 +41,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="hover:text-red-600 transition ease-in-out duration-300">Contact</a>
+                                <a href="{{route('layouts.contact')}}" class="hover:text-red-600 transition ease-in-out duration-300">Contact</a>
                             </li>
                         </ul>
                     </div>

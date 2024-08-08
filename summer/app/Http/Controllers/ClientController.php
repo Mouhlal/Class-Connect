@@ -12,4 +12,7 @@ class ClientController extends Controller
     public function faq(){
         return view('layouts.faq');
     }
+    public function contact(){
+        return view('layouts.contact');
+    }
 }

@@ -17,16 +17,24 @@
                 </li>
 
                 <li class="text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                    <a href="{{route('layouts.faq')}}">Faq</a>
+                </li>
+
+                @auth
+                <li class="text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
                     <a href="{{route('profs.profs')}}">Professeurs</a>
                 </li>
+                @endauth
 
                 <li class="text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
                     <a href="{{route('profs.modules')}}">Modules</a>
                 </li>
 
+                @auth
                 <li class="text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
                     <a href="#">Etudiants</a>
                 </li>
+                @endauth
 
                 @guest
                 <li class="px-8 py-3 text-green-500 text-lg text-center border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">

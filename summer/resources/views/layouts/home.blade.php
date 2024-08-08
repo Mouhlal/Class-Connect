@@ -99,7 +99,7 @@
 
                     <p class="font-normal text-gray-400 text-sm md:text-lg mb-5">Organisez et gérez les classes efficacement avec notre interface intuitive.</p>
 
-                    <a href="#" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
+                    <a href="{{route('layouts.faq')}}" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
                         En savoir plus
                         <i data-feather="chevron-right"></i>
                     </a>
@@ -133,7 +133,7 @@
 
                     <p class="font-normal text-gray-400 text-sm md:text-lg mb-5">Suivez les progrès des étudiants et accédez à leurs résultats en un clic.</p>
 
-                    <a href="#" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
+                    <a href="{{route('layouts.faq')}}" class="flex items-center justify-center xl:justify-start font-semibold text-green-500 text-lg gap-3 hover:text-green-700 transition ease-in-out duration-300">
                         En savoir plus
                         <i data-feather="chevron-right"></i>
                     </a>
@@ -147,13 +147,13 @@
      <div class="container max-w-screen-xl mx-auto px-4">
         <div class="flex flex-wrap md:flex-nowrap justify-between mb-8">
             <div>
-                <p class="font-normal text-gray-500 text-md md:text-lg uppercase mb-3">Let's tealk</p>
+                <p class="font-normal text-gray-500 text-md md:text-lg uppercase mb-3">Let's talk</p>
 
-                <h1 class="font-bold text-gray-700 text-xl md:text-4xl">Do you have any Project?</h1>
+                <h1 class="font-bold text-gray-700 text-xl md:text-4xl">Do you have any Question?</h1>
             </div>
 
             <div class="mt-10">
-                <a href="#" class="px-4 py-2 md:px-8 md:py-3 font-medium text-green-500 text-lg border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">
+                <a href="{{route('layouts.contact')}}" class="px-4 py-2 md:px-8 md:py-3 font-medium text-green-500 text-lg border-2 border-green-500 rounded-md hover:bg-green-500 hover:text-white transition ease-linear duration-300">
                     Contact us now
                 </a>
             </div>
