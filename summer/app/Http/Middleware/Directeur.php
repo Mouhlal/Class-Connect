@@ -11,11 +11,10 @@ class Directeur
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->Directeur) {
+        if (Auth::check() && Auth::user()->isDirecteur) {
             return $next($request);
         }
 
         return redirect('/')->with('error', 'You do not have directeur access.');
-
     }
 }

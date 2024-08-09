@@ -21,7 +21,7 @@
                 <h1 class="text-2xl font-bold text-gray-700 mb-2">Connexion</h1>
                 <p class="text-gray-500">Connectez-vous à votre compte</p>
             </div>
-            <form action="{{route('auth.login')}}" method="POST">
+            <form action="{{route('login')}}" method="POST">
                 @csrf
                 @foreach($errors->all() as $error)
                 <div class="text-green-600 p-2 border-gray-300 border rounded inline-block relative left-20 text-center">

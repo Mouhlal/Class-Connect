@@ -15,7 +15,7 @@ Route::controller(ClientController::class)->group(function(){
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/login','loginForm')->name('auth.Formlogin')->middleware('guest');
-    Route::post('/login','login')->name('auth.login')->middleware('guest');
+    Route::post('/login','login')->name('login')->middleware('guest');
     Route::get('/logout','logout')->name('auth.logout')->middleware('auth');
     Route::get('/register','register')->name('auth.register')->middleware('guest');
     Route::post('/store','store')->name('auth.store')->middleware('guest');
@@ -25,3 +25,4 @@ Route::controller(UserController::class)->group(function(){
 
 Route::get('/modules',[ModulesController::class,'index'])->name('profs.modules');
 Route::get('/etudiants',[EtudiantsController::class,'index'])->name('etudiants.etudiants')->middleware('auth');
+
