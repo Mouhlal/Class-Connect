@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(ClientController::class)->group(function(){
     Route::get('/','home')->name('layouts.home');
     Route::get('/FAQ','faq')->name('layouts.faq');
-    Route::get('/contact','contact')->name('layouts.contact');
+    Route::get('/contact','contact')->name('layouts.contact')->middleware('Directeur');
 });
 
 Route::controller(UserController::class)->group(function(){
