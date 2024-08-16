@@ -12,14 +12,14 @@
 
     @include('layouts.header')
 
-    <div class="container relative md:bottom-36 mx-auto px-4 py-8">
-        <div class="text-center mb-8">
+    <div class="container relative md:bottom-44 mx-auto px-4 py-8">
+       {{--  <div class="text-center mb-8">
             <h1 class="text-4xl font-bold text-green-700">Liste des Étudiants</h1>
-        </div>
+        </div> --}}
         <div class="mb-8 flex justify-center">
             <form action="{{ route('etudiants.etudiants') }}" method="GET" class="flex items-center">
                 <select name="nv_scolaires_id" class="p-3 border border-gray-300 rounded-lg mr-4 bg-white">
-                    <option value="">Tous les groupes</option>
+                    <option value=""> Tous les groupes </option>
                     @foreach($nv_scolaires as $groupe)
                         <option value="{{ $groupe->id }}" {{ isset($nv_scolaires_id) && $nv_scolaires_id == $groupe->id ? 'selected' : '' }}>
                             {{ $groupe->nomgrp }}
@@ -32,7 +32,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($etudiants as $etudiant)
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('images/'.$etudiant->image) }}" alt="{{ $etudiant->nomEt }}" class="w-full h-48 object-cover">
+                    <img src="{{ asset('storage/'.$etudiant->image) }}" alt="{{ $etudiant->nomEt }}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h2 class="text-2xl font-bold text-gray-800">{{ $etudiant->nomEt }} {{ $etudiant->prenomEt }}</h2>
                         <p class="text-gray-600">{{ $etudiant->email }}</p>

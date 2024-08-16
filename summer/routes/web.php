@@ -11,6 +11,7 @@ Route::controller(ClientController::class)->group(function(){
     Route::get('/','home')->name('layouts.home');
     Route::get('/FAQ','faq')->name('layouts.faq');
     Route::get('/contact','contact')->name('layouts.contact')->middleware('Directeur');
+    Route::get('/table','table')->name('dashboard.table');
 });
 
 Route::controller(UserController::class)->group(function(){
@@ -29,5 +30,7 @@ Route::controller(EtudiantsController::class)->group(function(){
     Route::get('/etudiants','index')->name('etudiants.etudiants')->middleware('auth');
     Route::get('/etudiants/create','create')->name('etudiants.create')->middleware('Directeur');
     Route::post('/etudiants/store','store')->name('etudiants.store')->middleware('Directeur');
+    Route::post('/etudiants/edit/{id}','edit')->name('etudiants.edit')->middleware('Directeur');
+    Route::put('/etudiants/update/{id}','update')->name('etudiants.update')->middleware('Directeur');
 });
 

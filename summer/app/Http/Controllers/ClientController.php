@@ -15,4 +15,7 @@ class ClientController extends Controller
     public function contact(){
         return view('layouts.contact');
     }
+    public function table(){
+        return view('dashboard.tables');
+    }
 }
