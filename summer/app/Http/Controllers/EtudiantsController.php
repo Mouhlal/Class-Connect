@@ -25,6 +25,12 @@ class EtudiantsController extends Controller
             'etudiants' => $etudiants
         ]);
     }
+    public function show($id){
+        $et = Etudiants::with('nv_scolaires')->findOrFail($id);
+        return view('etudiants.show',[
+            'et' => $et
+        ]);
+    }
 
     public function create(){
         $groupe = NvScolaire::all();
@@ -49,11 +55,11 @@ class EtudiantsController extends Controller
     }
 
     public function edit($id){
-        $etudiants = Etudiants::findOrFail($id);
+        $etudiant = Etudiants::findOrFail($id);
         $groupe = NvScolaire::all();
-        return view('etudiants.edit',[
+        return view('etudiants.update',[
             'groupe' => $groupe,
-            'etudiants' => $etudiants
+            'etudiant' => $etudiant
             ]);
     }
     public function update(Request $request , $id){
@@ -75,5 +81,10 @@ class EtudiantsController extends Controller
         Etudiants::findOrFail($id)->update($form);
         return redirect()->route('etudiants.etudiants')->with('edit','Modification avec succes');
 
+    }
+
+    public function delete($id){
+        Etudiants::findOrFail($id)->delete();
+        return redirect()->route('etudiants.etudiants')->with('delete','Suppression avec succes');
     }
 }

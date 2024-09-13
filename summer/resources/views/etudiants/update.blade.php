@@ -12,7 +12,7 @@
 
     @include('layouts.header')
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="container relative bottom-40 mx-auto px-4 py-8">
         <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
             <h1 class="text-2xl font-bold text-gray-700 mb-6">Modifier Étudiant</h1>
             <form action="{{ route('etudiants.update', $etudiant->id) }}" method="POST" enctype="multipart/form-data">
@@ -37,7 +37,7 @@
                 <div class="mb-4">
                     <label for="nv_scolaires_id" class="block text-gray-700 font-semibold">Groupe:</label>
                     <select name="nv_scolaires_id" id="nv_scolaires_id" class="w-full p-2 border border-gray-300 rounded-lg">
-                        @foreach($nv_scolaires as $groupe)
+                        @foreach($groupe as $groupe)
                             <option value="{{ $groupe->id }}" {{ $etudiant->nv_scolaires_id == $groupe->id ? 'selected' : '' }}>
                                 {{ $groupe->nomgrp }}
                             </option>
@@ -48,9 +48,6 @@
                 <div class="mb-4">
                     <label for="image" class="block text-gray-700 font-semibold">Photo de Profil:</label>
                     <input type="file" name="image" id="image" class="w-full p-2 border border-gray-300 rounded-lg">
-                    @if($etudiant->image)
-                        <img src="{{ asset('images/'.$etudiant->image) }}" alt="{{ $etudiant->nomEt }}" class="w-24 h-24 rounded-full mt-4">
-                    @endif
                 </div>
 
                 <div class="flex justify-end">

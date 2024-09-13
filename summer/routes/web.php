@@ -30,7 +30,9 @@ Route::controller(EtudiantsController::class)->group(function(){
     Route::get('/etudiants','index')->name('etudiants.etudiants')->middleware('auth');
     Route::get('/etudiants/create','create')->name('etudiants.create')->middleware('Directeur');
     Route::post('/etudiants/store','store')->name('etudiants.store')->middleware('Directeur');
-    Route::post('/etudiants/edit/{id}','edit')->name('etudiants.edit')->middleware('Directeur');
+    Route::get('/etudiants/edit/{id}','edit')->name('etudiants.edit')->middleware('Directeur');
     Route::put('/etudiants/update/{id}','update')->name('etudiants.update')->middleware('Directeur');
+    Route::get('/etudiants/{id}','show')->name('etudiants.show')->middleware('Directeur');
+    Route::delete('/etudiants/delete/{id}','delete')->name('etudiants.delete')->middleware('Directeur');
 });
 

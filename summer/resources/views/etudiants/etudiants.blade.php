@@ -31,14 +31,16 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($etudiants as $etudiant)
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="{{ asset('storage/'.$etudiant->image) }}" alt="{{ $etudiant->nomEt }}" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold text-gray-800">{{ $etudiant->nomEt }} {{ $etudiant->prenomEt }}</h2>
-                        <p class="text-gray-600">{{ $etudiant->email }}</p>
-                        <p class="text-gray-600">{{ $etudiant->nv_scolaires->nomgrp }}</p>
+                <a href="{{route('etudiants.show' , $etudiant->id)}}">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="{{ asset('storage/'.$etudiant->image) }}" alt="{{ $etudiant->nomEt }}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800">{{ $etudiant->nomEt }} {{ $etudiant->prenomEt }}</h2>
+                            <p class="text-gray-600">{{ $etudiant->email }}</p>
+                            <p class="text-gray-600">{{ $etudiant->nv_scolaires->nomgrp }}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>
