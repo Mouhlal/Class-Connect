@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AffectationController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EtudiantsController;
 use App\Http\Controllers\ModulesController;
@@ -24,7 +25,9 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/profs/{id}','profile')->name('profs.profile')->middleware('auth');
 });
 
-Route::get('/modules',[ModulesController::class,'index'])->name('profs.modules');
+Route::controller(ModulesController::class)->group(function(){
+    Route::get('/modules','index')->name('profs.modules');
+});
 
 Route::controller(EtudiantsController::class)->group(function(){
     Route::get('/etudiants','index')->name('etudiants.etudiants')->middleware('auth');
@@ -36,3 +39,7 @@ Route::controller(EtudiantsController::class)->group(function(){
     Route::delete('/etudiants/delete/{id}','delete')->name('etudiants.delete')->middleware('Directeur');
 });
 
+Route::controller(AffectationController::class)->group(function(){
+    Route::get('/affectation','show')->name('affectations.show')->middleware('Directeur');
+    Route::post('/affectations/créer','index')->name('affectations.index')->middleware('Directeur');
+});

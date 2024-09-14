@@ -23,10 +23,6 @@
                     <h1 class="text-3xl font-bold text-gray-800">{{ $et->nomEt }} {{ $et->prenomEt }}</h1>
                     <p class="text-gray-600 mt-2"><strong>Email:</strong> {{ $et->email }}</p>
                     <p class="text-gray-600 mt-2"><strong>Groupe:</strong> {{ $et->nv_scolaires->nomgrp }}</p>
-                    <p class="text-gray-600 mt-2"><strong>Date de Naissance:</strong> {{ $et->date_naissance }}</p>
-                    <p class="text-gray-600 mt-2"><strong>Téléphone:</strong> {{ $et->telephone }}</p>
-                    <p class="text-gray-600 mt-2"><strong>Adresse:</strong> {{ $et->adresse }}</p>
-
                     <div class="mt-6 flex space-x-4">
                         <!-- Edit and Delete Buttons -->
                         <a href="{{ route('etudiants.edit', $et->id) }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-400 transition duration-300">Modifier</a>

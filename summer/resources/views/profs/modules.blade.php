@@ -14,7 +14,7 @@
 
     @include('layouts.header')
 
-    <div class="container mx-auto px-4 py-8 md:relative md:bottom-36">
+    <div class="container mx-auto px-4 py-8 md:relative md:bottom-40">
         <div class="text-center mb-12">
             <h1 class="text-3xl font-bold text-gray-700">Les Modules</h1>
             <p class="text-gray-500">Voici la liste de tous les modules offerts par notre école</p>

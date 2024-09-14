@@ -27,6 +27,11 @@
                     @endforeach
                 </select>
                 <button type="submit" class="p-3 bg-green-600 text-white rounded-lg hover:bg-green-500 transition duration-300">Filtrer</button>
+                </form>
+                <a href="{{route('etudiants.create')}}">
+                    <input type="button" value="Ajouter Etudiant" class="p-3 bg-green-600 text-white rounded-lg hover:bg-green-500 transition duration-300">
+                </a>
+
             </form>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
