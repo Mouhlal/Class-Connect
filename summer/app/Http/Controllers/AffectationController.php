@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Professeur;
-use App\Models\Groupe;
-use App\Models\Module;
 use App\Models\Affectation;
 use App\Models\Modules;
 use App\Models\NvScolaire;
@@ -15,13 +12,15 @@ class AffectationController extends Controller
 {
     public function show()
     {
-        // Fetching all necessary data to populate the form
-        $users = User::all();
+        $user = User::all();
         $groupes = NvScolaire::all();
         $modules = Modules::all();
 
-        // Passing data to the view
-        return view('affectation.show', compact('users', 'groupes', 'modules'));
+        return view('affectation.show',[
+            'user' => $user,
+            'groupes' => $groupes,
+            'modules' => $modules
+        ]);
     }
 
     public function index(Request $request)
@@ -48,7 +47,6 @@ class AffectationController extends Controller
             ]);
         }
 
-        // Redirect with success message
         return redirect()->back()->with('success', 'Le professeur a été affecté avec succès.');
     }
 }

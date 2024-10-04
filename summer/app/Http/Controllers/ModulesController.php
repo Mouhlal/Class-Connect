@@ -17,4 +17,17 @@ class ModulesController extends Controller
         ]);
     }
 
+    public function show(){
+        return view('profs.addmodule');
+    }
+    public function create(Request $request){
+        $form = $request->validate([
+            'nomMod' => 'required',
+            'coef' => 'required',
+            'horaires' => 'required'
+        ]);
+        Modules::create($form);
+        return redirect()->route('profs.modules');
+    }
+
 }
