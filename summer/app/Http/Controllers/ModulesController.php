@@ -12,13 +12,13 @@ class ModulesController extends Controller
 
     public function index(){
         $modules = Modules::with('affectations')->get();
-        return view('profs.modules',[
+        return view('modules.modules',[
             'modules' => $modules,
         ]);
     }
 
     public function show(){
-        return view('profs.addmodule');
+        return view('modules.addmodule');
     }
     public function create(Request $request){
         $form = $request->validate([
@@ -27,7 +27,25 @@ class ModulesController extends Controller
             'horaires' => 'required'
         ]);
         Modules::create($form);
-        return redirect()->route('profs.modules');
+        return redirect()->route('modules.modules');
     }
 
+    public function modify(){
+        return view('profs.editModule');
+    }
+    public function edit(Request $request ,$id){
+        $mod = Modules::findOrFail($id) ;
+        $form = $request->validate([
+            'nomMod' => 'nullable' ,
+            'coef' => 'nullable' ,
+            'horaires' => 'nullable'
+        ]);
+        $mod->update($form);
+        return redirect()->route('modules.modules')->with('addmodule','Ajoutation avec succes');
+    }
+    public function delete($id){
+        $mod = Modules::findOrFail($id) ;
+        $mod->delete();
+        return redirect()->route('modules.modules')->with('dropmodule','Suppression avec succes');
+    }
 }

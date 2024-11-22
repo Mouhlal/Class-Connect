@@ -40,7 +40,7 @@ class AffectationController extends Controller
 
         // Loop through selected modules and assign professor to each
         foreach ($moduleIds as $moduleId) {
-            Affectation::create([
+            Affectation::create(attributes: [
                 'users_id' => $professeurId,
                 'nv_scolaires_id' => $groupeId,
                 'modules_id' => $moduleId,

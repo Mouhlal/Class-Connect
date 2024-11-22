@@ -27,7 +27,7 @@
                 @endauth
 
                 <li class="text-green-500 text-lg hover:text-green-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                    <a href="{{route('profs.modules')}}">Modules</a>
+                    <a href="{{route('modules.modules')}}">Modules</a>
                 </li>
 
                 @auth

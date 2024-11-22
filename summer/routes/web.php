@@ -13,7 +13,9 @@ Route::controller(ClientController::class)->group(function(){
     Route::get('/FAQ','faq')->name('layouts.faq');
     Route::get('/contact','contact')->name('layouts.contact')->middleware('Directeur');
     Route::get('/table','table')->name('dashboard.table');
+    Route::get('/dasboard','layouts.dashboard')->name('layouts.dash');
 });
+
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/login','loginForm')->name('auth.Formlogin')->middleware('guest');
@@ -21,12 +23,16 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/logout','logout')->name('auth.logout')->middleware('auth');
     Route::get('/register','register')->name('auth.register')->middleware('guest');
     Route::post('/store','store')->name('auth.store')->middleware('guest');
-    Route::get('/profs','index')->name('profs.profs')->middleware('Directeur');
+    Route::get('/profs', 'index')->name('profs.profs')->middleware('Directeur');
     Route::get('/profs/{id}','profile')->name('profs.profile')->middleware('auth');
 });
 
 Route::controller(ModulesController::class)->group(function(){
-    Route::get('/modules','index')->name('profs.modules');
+    Route::get('/modules','index')->name('modules.modules');
+    Route::get('/modules/{id}','modify')->name('modules.modify');
+    Route::post('/modules/edit/{id}','edit')->name('modules.edit');
+    Route::get('/modules/create','show')->name('modules.create');
+    Route::post('/modules/store','create')->name('modules.store');
 });
 
 Route::controller(EtudiantsController::class)->group(function(){

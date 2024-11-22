@@ -26,7 +26,7 @@ class UserController extends Controller
         $form['password'] = Hash::make($request->password);
         $form['image'] = $request->file('image')->store('users','public');
         User::create($form);
-        return redirect()->route('auth.login')->with('succes','Le compte a bien crée');
+        return redirect()->route('auth.Formlogin')->with('succes','Le compte a bien crée');
     }
 
     public function loginForm(){
