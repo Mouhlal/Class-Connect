@@ -18,7 +18,7 @@ class ModulesController extends Controller
     }
 
     public function show(){
-        return view('modules.addmodule');
+        return view('modules.show');
     }
     public function create(Request $request){
         $form = $request->validate([
@@ -30,17 +30,18 @@ class ModulesController extends Controller
         return redirect()->route('modules.modules');
     }
 
-    public function modify(){
-        return view('profs.editModule');
+    public function modify($id){
+        $modules = Modules::findOrFail($id) ;
+        return view('modules.modify',compact('modules'));
     }
     public function edit(Request $request ,$id){
-        $mod = Modules::findOrFail($id) ;
         $form = $request->validate([
             'nomMod' => 'nullable' ,
             'coef' => 'nullable' ,
             'horaires' => 'nullable'
         ]);
-        $mod->update($form);
+        $modules = Modules::findOrFail($id) ;
+        $modules->update($form);
         return redirect()->route('modules.modules')->with('addmodule','Ajoutation avec succes');
     }
     public function delete($id){

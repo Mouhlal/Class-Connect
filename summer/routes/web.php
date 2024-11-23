@@ -30,9 +30,9 @@ Route::controller(UserController::class)->group(function(){
 Route::controller(ModulesController::class)->group(function(){
     Route::get('/modules','index')->name('modules.modules');
     Route::get('/modules/{id}','modify')->name('modules.modify');
-    Route::post('/modules/edit/{id}','edit')->name('modules.edit');
-    Route::get('/modules/create','show')->name('modules.create');
-    Route::post('/modules/store','create')->name('modules.store');
+    Route::put('/modules/edit/{id}','edit')->name('modules.edit');
+    Route::get('/show','show')->name('modules.show');
+    Route::post('/modules/create','create')->name('modules.store');
 });
 
 Route::controller(EtudiantsController::class)->group(function(){

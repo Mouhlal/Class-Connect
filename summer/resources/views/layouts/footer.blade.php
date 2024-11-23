@@ -23,7 +23,7 @@
                             </li>
 
                             <li>
-                                <a href="{{route('profs.modules')}}" class="hover:text-red-600 transition ease-in-out duration-300">Modules</a>
+                                <a href="{{route('modules.modules')}}" class="hover:text-red-600 transition ease-in-out duration-300">Modules</a>
                             </li>
                         </ul>
                     </div>
