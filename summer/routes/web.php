@@ -33,6 +33,7 @@ Route::controller(ModulesController::class)->group(function(){
     Route::put('/modules/edit/{id}','edit')->name('modules.edit');
     Route::get('/show','show')->name('modules.show');
     Route::post('/modules/create','create')->name('modules.store');
+    Route::delete('/modules/delete/{id}','delete')->name('modules.delete');
 });
 
 Route::controller(EtudiantsController::class)->group(function(){
