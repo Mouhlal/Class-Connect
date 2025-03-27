@@ -75,5 +75,7 @@ php artisan serve
 ```  
 L'application sera accessible sur : **http://127.0.0.1:8000**  
 
+ ![Class-Connect](public/images/class-connect.png)
+
 
 
