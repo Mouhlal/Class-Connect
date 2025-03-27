@@ -75,7 +75,7 @@ php artisan serve
 ```  
 L'application sera accessible sur : **http://127.0.0.1:8000**  
 
-![Base de Données School Management](Bd-SchoolMAnagment.png)
+<img src="https://raw.githubusercontent.com/Mouhlal/Class-Connect/main/Bd-SchoolMAnagment.png" alt="Base de Données School Management" width="600">
 
 
 
